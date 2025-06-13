@@ -19,19 +19,6 @@ onMounted(() => {
 <template>
   <div class="table-place-wrapper">
     <div class="controls">
-      <div class="select">
-        <label for="player-count">Количество игроков:</label>
-        <select
-            :value="pokerStore.numberOfPlayers"
-            @change="pokerStore.setNumberOfPlayers(Number($event.target.value))"
-        >
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-        </select>
-      </div>
       <button class="button" @click="pokerStore.dealCards">Раздать карты</button>
       <button class="button" @click="pokerStore.toggleVisibility">Показать/Скрыть карты</button>
     </div>
